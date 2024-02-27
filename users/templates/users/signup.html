@@ -1,0 +1,26 @@
+
+
+{%if user.is_authenticated %}
+<h1>이미 회원입니다. </h1>
+
+
+
+{% else %}
+<h1>회원가입 </h1>
+<br>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <p>account</p>
+    <input name="account" type="text">
+    <p>password</p>
+    <input name="password" type="password">
+    <p>display name</p>
+    <input name="display_name" type="text">
+    <p>email</p>
+    <input name="email" type="email">
+    <p>
+    <input type="submit" value="signup_request" /> <br>
+</form>
+
+{% endif %}
